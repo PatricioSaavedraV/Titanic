@@ -164,5 +164,5 @@ data_cleaned['embarked_id'] = data_cleaned['embarked_id'].astype(int)
 # Modificar 'title_id' del data_test a int
 data_test['title_id'] = data_test['title_id'].astype(int)
 
-data_cleaned.to_csv(r'C:\Users\Pato\Desktop\VS\DS\Titanic2', index=False)
-data_test.to_csv(r'C:\Users\Pato\Desktop\VS\DS\Titanic', index=False)
+data_cleaned.to_csv(r'C:\Users\Pato\Desktop\VS\DS\Titanic\data_cleaned', index=False)
+data_test.to_csv(r'C:\Users\Pato\Desktop\VS\DS\Titanic\data_test', index=False)
