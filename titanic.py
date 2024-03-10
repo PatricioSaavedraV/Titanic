@@ -10,9 +10,9 @@ data_raw = data_raw.drop(columns=['PassengerId'])
 
 # Función con patrón de expresión regular para extraer el título del nombre
 def extract_name(df, var):
-  pattern = r',\s*([^\.]+)\.'
-  title_name = df[var].str.extract(pattern, expand=False)
-  return title_name
+    pattern = r',\s*([^\.]+)\.'
+    title_name = df[var].str.extract(pattern, expand=False)
+    return title_name
 
 data_raw['title'] = extract_name(data_raw, 'Name')
 data_test['title'] = extract_name(data_raw, 'Name')
@@ -71,16 +71,16 @@ data_test = data_test.drop(columns=['Sex'])
 
 # Para la variable "Age" se modifican sus valores NULL por el promedio
 def mean(df, var):
-  mean = df[var].mean()
-  return mean
+    mean = df[var].mean()
+    return mean
 
 data_raw['Age'] = data_raw['Age'].fillna(mean(data_raw, 'Age'))
 data_test['Age'] = data_test['Age'].fillna(mean(data_test, 'Age'))
 
 # Función para unificar las variables "SibSp" y "Parch"
 def var_sum (df, var1, var2):
-  sum = df[var1] + df[var2]
-  return sum
+    sum = df[var1] + df[var2]
+    return sum
 
 family_size_raw = var_sum(data_raw, 'SibSp', 'Parch')
 family_size_test = var_sum(data_test, 'SibSp', 'Parch')
@@ -125,8 +125,8 @@ data_test = data_test.drop(columns=['Embarked'])
 
 # Función para buscar la mediana y reemplazar los valores NULL
 def median(df, var):
-  median = df[var].median()
-  return median
+    median = df[var].median()
+    return median
 
 data_raw['embarked_id'] = data_raw['embarked_id'].fillna(median(data_raw, 'embarked_id'))
 data_test['embarked_id'] = data_test['embarked_id'].fillna(median(data_test, 'embarked_id'))
@@ -134,7 +134,8 @@ data_test['embarked_id'] = data_test['embarked_id'].fillna(median(data_test, 'em
 # se buca la mediana y se reemplazan los valores NULL
 data_test['Fare'] = data_test['Fare'].fillna(median(data_test, 'Fare'))
 
-# Con respecto a "title_id", al ser varias clases no es posible utilizar el promedio, por lo cual también se utilizará la mediana
+# Con respecto a "title_id", al ser varias clases no es posible utilizar el promedio, 
+# por lo cual también se utilizará la mediana
 
 data_test['title_id'] = data_test['title_id'].fillna(median(data_test, 'title_id'))
 
