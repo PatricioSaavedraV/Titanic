@@ -77,6 +77,10 @@ def mean(df, var):
 data_raw['Age'] = data_raw['Age'].fillna(mean(data_raw, 'Age'))
 data_test['Age'] = data_test['Age'].fillna(mean(data_test, 'Age'))
 
+# Redondear "Age" a 2 decimales
+data_raw['Age'] = data_raw['Age'].round(2)
+data_test['Age'] = data_test['Age'].round(2)
+
 # Función para unificar las variables "SibSp" y "Parch"
 def var_sum (df, var1, var2):
     sum = df[var1] + df[var2]
@@ -133,6 +137,10 @@ data_test['embarked_id'] = data_test['embarked_id'].fillna(median(data_test, 'em
 
 # se buca la mediana y se reemplazan los valores NULL
 data_test['Fare'] = data_test['Fare'].fillna(median(data_test, 'Fare'))
+
+# Redondear "Fare" a 2 decimales
+data_raw['Fare'] = data_raw['Fare'].round(2)
+data_test['Fare'] = data_test['Fare'].round(2)
 
 # Con respecto a "title_id", al ser varias clases no es posible utilizar el promedio, 
 # por lo cual también se utilizará la mediana
