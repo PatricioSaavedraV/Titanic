@@ -1,2 +1,11 @@
-Se utilizó este dataset para realizar los primeros análisis con Python, en donde se esperaba poner a prueba los conocimientos básicos que debería tener un análista de datos.
-Por lo anterior, se buscaba realiar un análisis exploratorio del dataset, limpieza de datos, normalización y elección del mejor modelo de predicción.
+## Análisis y predicción de sobrevivientes en el hundimiento del Titanic
+
+### Objetivo: 
+* Realizar un análisis exploratorio de la información en el dataset.
+* Limpieza de los datos y normalización.
+* Elección de modelos de predicción más adecuados al tipo de datos.
+
+### Herramientas a utilizar
+* Para la descarga del data set se utilizó Kaggle.com.
+* Para generar la documentación se utilizó Google Colabs.
+* Como lenguaje de programación se utilizó Python. Acá, se utilizaron paquetes como pandas, numpy, matplotlil, searbon sklearn.
