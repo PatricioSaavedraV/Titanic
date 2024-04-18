@@ -8,4 +8,4 @@
 ### Herramientas a utilizar
 * Para la descarga del data set se utilizó Kaggle.com.
 * Para generar la documentación se utilizó Google Colabs.
-* Como lenguaje de programación se utilizó Python. Acá, se utilizaron paquetes como pandas, numpy, matplotlil, searbon sklearn.
+* Como lenguaje de programación se utilizó Python. Acá, se utilizaron paquetes como pandas, numpy, matplotlib, searbon sklearn.
